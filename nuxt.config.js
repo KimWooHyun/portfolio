@@ -34,5 +34,8 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  css: [
+    { src: '~assets/css/common.less', lang: 'less' }
+  ]
 }
