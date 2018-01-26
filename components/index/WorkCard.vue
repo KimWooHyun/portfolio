@@ -1,9 +1,7 @@
 <template>
-  <div class="col-m-12 col-p-6">
-    <figure class="flex flex-ai-center flex-jc-center" :style="cardStyle">
-      <img :src="require('~/assets' + logoImg)" :class="imgResponsive ? 'img-responsive' : ''"/>
-    </figure>
-  </div>
+  <figure class="flex flex-ai-center flex-jc-center" :style="cardStyle">
+    <img :src="require('~/assets' + logoImg)" :class="imgResponsive ? 'img-responsive' : ''"/>
+  </figure>
 </template>
 
 <script>
