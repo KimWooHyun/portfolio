@@ -1,5 +1,5 @@
 <template>
-  <figure class="flex flex-ai-center flex-jc-center" :style="cardStyle">
+  <figure class="flex flex-ai-center flex-jc-center" :style="cardStyle" @click="clickCard()">
     <img :src="require('~/assets' + logoImg)" :class="imgResponsive ? 'img-responsive' : ''"/>
   </figure>
 </template>
@@ -21,6 +21,17 @@ export default {
       type: Boolean,
       required: false,
       default: false
+    },
+    link: {
+      type: String,
+      required: false
+    }
+  },
+  methods: {
+    clickCard () {
+      if (this.link) {
+        this.$router.push(`/work/${this.link}`)
+      }
     }
   }
 }

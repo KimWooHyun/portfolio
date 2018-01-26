@@ -25,6 +25,7 @@
               :logoImg="card.img"
               :cardStyle="card.style"
               :imgResponsive="card.imgResponsive"
+              :link="card.link"
             ></work-card>
           </div>
         </div>
@@ -58,12 +59,14 @@ export default {
         {
           img: '/image/logo-om.png',
           imgResponsive: false,
-          style: { 'background-color': '#222944' }
+          style: { 'background-color': '#222944' },
+          link: 'onemoment'
         },
         {
           img: '/image/logo-se.png',
           imgResponsive: true,
           style: { 'background-color': '#2fc1b6' },
+          link: 'ateamventures'
         }
       ],
       paCards: [
@@ -71,6 +74,7 @@ export default {
           'date': '2017.07 - 현재',
           'title': 'vue-lunar-calendar',
           'contents': [
+            '<strong>개인 프로젝트</strong>',
             '- Vue.js component library',
             '- <a href="https://github.com/KimWooHyun/vue-lunar-calendar">https://github.com/KimWooHyun/vue-lunar-calendar</a>',
             '- 한국 음력 달력 라이브러리',
@@ -82,6 +86,7 @@ export default {
           'date': '2017.08',
           'title': 'WHLunarCalendar',
           'contents': [
+            '<strong>개인 프로젝트</strong>',
             '- Swift library',
             '- <a href="https://github.com/KimWooHyun/WHLunarCalendar">https://github.com/KimWooHyun/WHLunarCalendar</a>',
             '- 한국 음력 달력 라이브러리',
@@ -92,7 +97,7 @@ export default {
           'date': '2017.12',
           'title': 'Do it! Vue.js',
           'contents': [
-            'vue.js 관련 책 기술 검토 및 자문',
+            '<strong>vue.js 관련 책 기술 검토 및 자문</strong>',
             '서명: Do it! Vue.js 입문서',
             '저자: 장기효',
             '대상 독자: 프레임워크를 다뤄보지 않은 웹 개발 입문자, Vue.js를 배우고 싶은 대학생 & 퍼블리셔 & 실무자',
@@ -103,14 +108,14 @@ export default {
           'date': '2017.12',
           'title': 'Vue.js Korea Meetup3',
           'contents': [
-            'Vue.js Korea 3번째 밋업 스태프 및 행사 총괄'
+            '<strong>Vue.js Korea 3번째 밋업 스태프 및 행사 총괄</strong>'
           ]
         },
         {
           'date': '2017.11',
           'title': 'GDG DevFest',
           'contents': [
-            'GDG DevFest 스태프',
+            '<strong>GDG DevFest 스태프</strong>',
             '- 안내사이트 제작 참여',
             '- <a href="https://devfest17-seoul.firebaseapp.com/">https://devfest17-seoul.firebaseapp.com/</a>'
           ]
@@ -119,7 +124,7 @@ export default {
           'date': '2017.09',
           'title': '9XD 해커톤',
           'contents': [
-            '9XD 해커톤 "내꺼만들기, 내꺼톤" 참가',
+            '<strong>9XD 해커톤 "내꺼만들기, 내꺼톤" 참가</strong>',
             '- Vue.js 전파',
             '- 팀 주제: 불만',
             '- 본인의 불만을 말하고 피드백을 받을 수 있는 게시판 형태의 웹 서비스 "불만투고" 제작 및 배포'
@@ -129,7 +134,7 @@ export default {
           'date': '2017.08',
           'title': 'GDG Web Tech',
           'contents': [
-            'GDG Web Tech 발표',
+            '<strong>GDG Web Tech 발표</strong>',
             '- Vue.js 관련 발표',
             '- <a href="https://www.slideshare.net/ssuserd3aacb/vue-js-79169830">https://www.slideshare.net/ssuserd3aacb/vue-js-79169830</a>'
           ]
@@ -138,14 +143,14 @@ export default {
           'date': '2017.08',
           'title': 'Vue.js Korea Meetup2',
           'contents': [
-            'vue.js Korea 2번째 밋업 스태프'
+            '<strong>vue.js Korea 2번째 밋업 스태프</strong>'
           ]
         },
         {
           'date': '2017.07',
           'title': 'GDG Korea Campus summer party',
           'contents': [
-            'GDG Korea Campus 스태프',
+            '<strong>GDG Korea Campus 스태프</strong>',
             '- 행사 준비',
             '- 안내사이트 제작 참여',
             '- <a href="https://gdgsummerparty.firebaseapp.com">https://gdgsummerparty.firebaseapp.com</a>'
@@ -153,9 +158,6 @@ export default {
         }
       ]
     }
-  },
-  created () {
-    console.log('Hello stranger!')
   }
 }
 </script>
