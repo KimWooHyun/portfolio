@@ -1,6 +1,7 @@
 <template>
   <figure class="flex flex-ai-center flex-jc-center" :style="cardStyle" @click="clickCard()">
-    <img :src="require('~/assets' + logoImg)" :class="imgResponsive ? 'img-responsive' : ''"/>
+    <p v-if="logoImg === 'ateamventures'">ATEAM VENTURES</p>
+    <img :src="require('~/assets' + logoImg)" :class="imgResponsive ? 'img-responsive' : ''" v-else/>
   </figure>
 </template>
 
@@ -50,6 +51,11 @@ figure {
 figure:hover {
   transform: scale(1.05);
   transition: transform 0.35s;
+}
+p {
+  color: #ffffff;
+  text-align: center;
+  font-size: 4rem;
 }
 
 @media only screen and ( min-width : 768px ){

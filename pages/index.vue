@@ -63,9 +63,9 @@ export default {
           link: 'onemoment'
         },
         {
-          img: '/image/companyLogo/logo-se.png',
+          img: 'ateamventures',
           imgResponsive: true,
-          style: { 'background-color': '#2fc1b6' },
+          style: { 'background-color': '#02c1f7' },
           link: 'ateamventures'
         }
       ],

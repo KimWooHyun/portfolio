@@ -8,8 +8,22 @@
         </div>
       </div>
     </section>
-    <section class="section-main-tab">
-      <ul class="flex flex-wrap flex-jc-center ">
+    <section class="container section-info">
+      <div class="col-m-12 col-p-12">
+        <h1>회사 소개</h1>
+        <p>90분 당일 꽃배달 서비스 “원모먼트 플라워” 를 서비스 중인 스타트업.</p>
+      </div>
+      <div class="col-m-12 col-p-12">
+        <h1>서비스</h1>
+        <h2>Web</h2>
+        <p>- <a href="https://1moment.co.kr/">https://1moment.co.kr/</a></p>
+        <p>- 현재 Vue.js (SPA)로 개발된 사이트</p><br />
+        <h2>iOS App</h2>
+        <p>- <a href="https://goo.gl/jP2ZYR">https://goo.gl/jP2ZYR</a></p>
+      </div>
+    </section>
+    <section class="container section-main-tab">
+      <ul class="flex flex-wrap flex-jc-center col-m-12 col-p-12">
         <li :class="['col-m-6', 'col-p-6', activeMainTab === 'web' ? 'active' : '' ]" @click="clickMainTab('web')">
           <h1>Web Front-End</h1>
         </li>
@@ -34,6 +48,14 @@
         <section class="container">
           <section v-if="activeWebTab === 'django'">
             <div class="flex flex-wrap flex-jc-center">
+              <h2 class="col-m-12 col-p-12">서비스 런칭</h2>
+              <div class="col-m-12 col-p-12 div-info">
+                <p>
+                  - Django template을 이용한 front-end 개발<br/>
+                  - 기여도 : 100%, 단독진행<br/>
+                  stack: HTML5, CSS3, JavaScript, jQuery, Django
+                </p>
+              </div>
               <h2 class="col-m-12 col-p-12">메인 페이지</h2>
               <div class="col-m-12 col-p-12 div-img">
                 <img src="~assets/image/om/onemoment.png" class="img-responsive"/>
@@ -46,6 +68,17 @@
           </section>
           <section v-else-if="activeWebTab === 'vue'">
             <div class="flex flex-wrap flex-jc-center">
+              <h2 class="col-m-12 col-p-12">vue.js 도입</h2>
+              <div class="col-m-12 col-p-12 div-info">
+                <p>
+                  - 원모먼트 서비스 사이트 전체 리뉴얼<br/>
+                  - Vue.js (SPA) 도입<br/>
+                  - 비동기 처리를 이용한 서비스 속도 개선<br/>
+                  - vue-resource 를 활용한 api call<br/>
+                  - 기여도 : 45%<br/>
+                  stack: Vue.js, Bootstrap 4, Bootstrap 3, jQuery
+                </p>
+              </div>
               <h2 class="col-m-12 col-p-12">메인 페이지</h2>
               <div class="col-m-12 col-p-12 div-img">
                 <img src="~assets/image/om/onemoment-vue.png" class="img-responsive"/>
@@ -58,6 +91,20 @@
           </section>
           <section v-else-if="activeWebTab === 'nuxt'">
             <div class="flex flex-wrap flex-jc-center">
+              <h2 class="col-m-12 col-p-12">nuxt.js 도입</h2>
+              <div class="col-m-12 col-p-12 div-info">
+                <p>
+                  - 원모먼트 서비스 사이트 전체 리뉴얼<br/>
+                  - Nuxt.js 도입 및 SSR 지원<br/>
+                  - css 프레임워크 제거 및 LESS 도입<br/>
+                  - 그리드 시스템 개발<br/>
+                  - 시멘틱 웹 표준 준수<br/>
+                  - axios 를 활용한 api call<br/>
+                  - PM2, ecosystem을 이용한 배포 자동화<br/>
+                  - 기여도 : 100%, 단독진행<br/>
+                  stack: Vue.js, Nuxt.js, Less
+                </p>
+              </div>
               <h2 class="col-m-12 col-p-12">메인 페이지</h2>
               <div class="col-m-12 col-p-12 div-img">
                 <img src="~assets/image/om/onemoment-nuxt.png" class="img-responsive"/>
@@ -149,6 +196,19 @@ section {
     }
   }
 }
+.section-info {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  h1 {
+    padding-bottom: 10px;
+  }
+  div {
+    margin-bottom: 20px;
+  }
+  p {
+    line-height: 2;
+  }
+}
 .section-main-tab {
   li {
     padding: 50px 0px;
@@ -171,6 +231,13 @@ section {
   }
   li.active {
     border-bottom: 5px solid @dark-black;
+  }
+}
+.div-info {
+  margin: 10px 0px 60px 0px;
+  p {
+    font-size: 16px;
+    line-height: 1.8;
   }
 }
 .div-img {
