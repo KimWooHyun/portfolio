@@ -92,7 +92,7 @@
           <div class="div-app-wrapper col-m-12 col-p-12">
             <h2 class="col-m-12 col-p-12">영상</h2>
             <video width="100%" height="auto" controls>
-              <source src="~assets/video/om.mp4" type="video/mp4">
+              <source src="~assets/video/om/om.mp4" type="video/mp4">
             </video>
           </div>
         </section>
