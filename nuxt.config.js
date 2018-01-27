@@ -1,4 +1,7 @@
 module.exports = {
+  router: {
+    base: '/portfolio/'
+  },
   /*
   ** Headers of the page
   */
@@ -22,6 +25,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    publicPath: '/assets/',
     /*
     ** Run ESLint on save
     */
