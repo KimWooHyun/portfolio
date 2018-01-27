@@ -57,13 +57,13 @@ export default {
     return {
       workCards: [
         {
-          img: '/image/logo-om.png',
+          img: '/image/companyLogo/logo-om.png',
           imgResponsive: false,
           style: { 'background-color': '#222944' },
           link: 'onemoment'
         },
         {
-          img: '/image/logo-se.png',
+          img: '/image/companyLogo/logo-se.png',
           imgResponsive: true,
           style: { 'background-color': '#2fc1b6' },
           link: 'ateamventures'

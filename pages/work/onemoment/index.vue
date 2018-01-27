@@ -1,61 +1,101 @@
 <template>
   <section>
-    <section class="section-intro">
-      <img src="~assets/image/bg-intro.jpg" class="img-responsive"/>
-      <div class="container flex-wrap flex-jc-center">
-        <div class="div-intro-contents">
+    <section class="section-intro img-background">
+      <div class="flex flex-wrap flex-ai-center flex-jc-center div-slogan">
+        <div>
           <h1>Make a Magical Moment</h1>
           <h3>Flower On Demand Service</h3>
         </div>
       </div>
     </section>
-    <section class="container flex-ai-center flex-jc-center">
-      <nav>
-        <ul class="flex">
-          <li :class="activeTab === 'django' ? 'active' : ''" @click="clickTab('django')">서비스 런칭</li>
-          <li><i class="fas fa-arrow-right"></i></li>
-          <li :class="activeTab === 'vue' ? 'active' : ''" @click="clickTab('vue')">vue.js 도입</li>
-          <li><i class="fas fa-arrow-right"></i></li>
-          <li :class="activeTab === 'nuxt' ? 'active' : ''" @click="clickTab('nuxt')">nuxt.js 도입 및 ssr 지원</li>
-        </ul>
-      </nav>
+    <section class="section-main-tab">
+      <ul class="flex flex-wrap flex-jc-center ">
+        <li :class="['col-m-6', 'col-p-6', activeMainTab === 'web' ? 'active' : '' ]" @click="clickMainTab('web')">
+          <h1>Web Front-End</h1>
+        </li>
+        <li :class="['col-m-6', 'col-p-6', activeMainTab === 'app' ? 'active' : '' ]" @click="clickMainTab('app')">
+          <h1>iOS App</h1>
+        </li>
+      </ul>
     </section>
-    <section class="container">
-      <section :class="activeTab === 'django' ? 'show' : 'hide'">
-        <div class="flex flex-wrap flex-jc-center">
-          <h2 class="col-m-12 col-p-10">메인 페이지</h2>
-          <div class="col-m-12 col-p-10 div-img">
-            <img src="~assets/image/onemoment.png" class="img-responsive"/>
-          </div>
-          <h2 class="col-m-12 col-p-10">상세 페이지</h2>
-          <div class="col-m-12 col-p-10 div-img">
-            <img src="~assets/image/onemoment-detail.png" class="img-responsive"/>
-          </div>
-        </div>
+    <section class="section-tab-contents">
+      <section v-if="activeMainTab === 'web'">
+        <section class="container flex-ai-center flex-jc-center">
+          <nav>
+            <ul class="flex">
+              <li :class="activeWebTab === 'django' ? 'active' : ''" @click="clickWebTab('django')">서비스 런칭</li>
+              <li><i class="fas fa-arrow-right"></i></li>
+              <li :class="activeWebTab === 'vue' ? 'active' : ''" @click="clickWebTab('vue')">vue.js 도입</li>
+              <li><i class="fas fa-arrow-right"></i></li>
+              <li :class="activeWebTab === 'nuxt' ? 'active' : ''" @click="clickWebTab('nuxt')">nuxt.js 도입</li>
+            </ul>
+          </nav>
+        </section>
+        <section class="container">
+          <section v-if="activeWebTab === 'django'">
+            <div class="flex flex-wrap flex-jc-center">
+              <h2 class="col-m-12 col-p-12">메인 페이지</h2>
+              <div class="col-m-12 col-p-12 div-img">
+                <img src="~assets/image/om/onemoment.png" class="img-responsive"/>
+              </div>
+              <h2 class="col-m-12 col-p-12">상세 페이지</h2>
+              <div class="col-m-12 col-p-12 div-img">
+                <img src="~assets/image/om/onemoment-detail.png" class="img-responsive"/>
+              </div>
+            </div>
+          </section>
+          <section v-else-if="activeWebTab === 'vue'">
+            <div class="flex flex-wrap flex-jc-center">
+              <h2 class="col-m-12 col-p-12">메인 페이지</h2>
+              <div class="col-m-12 col-p-12 div-img">
+                <img src="~assets/image/om/onemoment-vue.png" class="img-responsive"/>
+              </div>
+              <h2 class="col-m-12 col-p-12">상세 페이지</h2>
+              <div class="col-m-12 col-p-12 div-img">
+                <img src="~assets/image/om/onemoment-vue-detail.png" class="img-responsive"/>
+              </div>
+            </div>
+          </section>
+          <section v-else-if="activeWebTab === 'nuxt'">
+            <div class="flex flex-wrap flex-jc-center">
+              <h2 class="col-m-12 col-p-12">메인 페이지</h2>
+              <div class="col-m-12 col-p-12 div-img">
+                <img src="~assets/image/om/onemoment-nuxt.png" class="img-responsive"/>
+              </div>
+              <h2 class="col-m-12 col-p-12">상세 페이지</h2>
+              <div class="col-m-12 col-p-12 div-img">
+                <img src="~assets/image/om/onemoment-nuxt-detail.png" class="img-responsive"/>
+              </div>
+            </div>
+          </section>
+        </section>
       </section>
-      <section :class="activeTab === 'vue' ? 'show' : 'hide'">
-        <div class="flex flex-wrap flex-jc-center">
-          <h2 class="col-m-12 col-p-10">메인 페이지</h2>
-          <div class="col-m-12 col-p-10 div-img">
-            <img src="~assets/image/onemoment-vue.png" class="img-responsive"/>
+      <section v-else-if="activeMainTab === 'app'">
+        <section class="container">
+          <div class="div-app-wrapper">
+            <h2 class="col-m-12 col-p-12">스크린샷</h2>
+            <div class="flex flex-wrap">
+              <div class="col-m-6 col-p-3 div-app-img">
+                <img src="~assets/image/om/app1.jpg" class="img-responsive"/>
+              </div>
+              <div class="col-m-6 col-p-3 div-app-img">
+                <img src="~assets/image/om/app2.jpg" class="img-responsive"/>
+              </div>
+              <div class="col-m-6 col-p-3 div-app-img">
+                <img src="~assets/image/om/app3.jpg" class="img-responsive"/>
+              </div>
+              <div class="col-m-6 col-p-3 div-app-img">
+                <img src="~assets/image/om/app4.jpg" class="img-responsive"/>
+              </div>
+            </div>
           </div>
-          <h2 class="col-m-12 col-p-10">상세 페이지</h2>
-          <div class="col-m-12 col-p-10 div-img">
-            <img src="~assets/image/onemoment-vue-detail.png" class="img-responsive"/>
+          <div class="div-app-wrapper col-m-12 col-p-12">
+            <h2 class="col-m-12 col-p-12">영상</h2>
+            <video width="100%" height="auto" controls>
+              <source src="~assets/video/om.mp4" type="video/mp4">
+            </video>
           </div>
-        </div>
-      </section>
-      <section :class="activeTab === 'nuxt' ? 'show' : 'hide'">
-        <div class="flex flex-wrap flex-jc-center">
-          <h2 class="col-m-12 col-p-10">메인 페이지</h2>
-          <div class="col-m-12 col-p-10 div-img">
-            <img src="~assets/image/onemoment-nuxt.png" class="img-responsive"/>
-          </div>
-          <h2 class="col-m-12 col-p-10">상세 페이지</h2>
-          <div class="col-m-12 col-p-10 div-img">
-            <img src="~assets/image/onemoment-nuxt-detail.png" class="img-responsive"/>
-          </div>
-        </div>
+        </section>
       </section>
     </section>
   </section>
@@ -68,12 +108,16 @@ export default {
   layout: 'noFooter',
   data () {
     return {
-      activeTab: 'django'
+      activeMainTab: 'web',
+      activeWebTab: 'django'
     }
   },
   methods: {
-    clickTab (tab) {
-      this.activeTab = tab
+    clickMainTab (tab) {
+      this.activeMainTab = tab
+    },
+    clickWebTab (tab) {
+      this.activeWebTab = tab
     }
   }
 }
@@ -86,34 +130,83 @@ h1 {
   font-size: 22px;
 }
 section {
-  min-height: 200px;
-}
-li {
-  padding: 10px;
-  cursor: pointer;
-}
-li.active {
-  border-bottom: 5px solid @dark-black;
+  min-height: 100px;
 }
 .section-intro {
-  background-color: #222944;
-  color: #89674e;
+  position: relative;
+  background-image: url('~assets/image/om/bg-intro.jpg');
+  height: 80vh;
+  .div-slogan {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    text-align: center;
+    h1 {
+      margin-bottom: 20px;
+    }
+  }
 }
-.div-intro-contents {
-  padding: 100px 0px;
-  text-align: center;
-  h1 {
-    margin-bottom: 20px;
+.section-main-tab {
+  li {
+    padding: 50px 0px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    color: #222944;
+  }
+  li.active {
+    background-color: #222944;
+    color: #89674e;
+    text-decoration: underline;
+  }
+}
+.section-tab-contents {
+  li {
+    padding: 5px;
+    cursor: pointer;
+  }
+  li.active {
+    border-bottom: 5px solid @dark-black;
   }
 }
 .div-img {
   margin: 10px 0px 60px 0px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
 }
+.div-app-wrapper {
+  margin: 60px 0px 60px 0px;
+  .div-app-img {
+    padding: 10px;
+    img {
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    }
+  }
+  video {
+    padding: 10px 0px;
+  }
+}
+
 
 @media only screen and ( min-width : 768px ){
   h1 {
     font-size: 36px;
   }
+  section {
+    min-height: 200px;
+  }
+  .section-main-tab {
+    li {
+      padding: 100px 0px;
+    }
+  }
+  .section-tab-contents {
+    li {
+      padding: 10px;
+    }
+  } 
 }
 </style>
