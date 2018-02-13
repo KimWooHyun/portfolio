@@ -1,7 +1,6 @@
 <template>
   <figure class="flex flex-ai-center flex-jc-center" :style="cardStyle" @click="clickCard()">
-    <p v-if="logoImg === 'ateamventures'">ATEAM VENTURES</p>
-    <img :src="require('~/assets' + logoImg)" :class="imgResponsive ? 'img-responsive' : ''" v-else/>
+    <img :src="require('~/assets' + logoImg)" :class="imgResponsive ? 'img-responsive' : ''"/>
   </figure>
 </template>
 

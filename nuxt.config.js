@@ -34,7 +34,14 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    loaders:[
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        loader: 'url-loader',
+        exclude: /assets/
+      }
+    ]
   },
   css: [
     { src: '~assets/css/common.less', lang: 'less' }
