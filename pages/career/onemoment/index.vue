@@ -3,8 +3,8 @@
     <section class="section-intro img-background">
       <div class="flex flex-wrap flex-ai-center flex-jc-center div-slogan">
         <div>
-          <h1>Make a Magical Moment</h1>
-          <h3>Flower On Demand Service</h3>
+          <h1>ONE MOMENT</h1>
+          <h2>Make a Magical Moment</h2>
         </div>
       </div>
     </section>

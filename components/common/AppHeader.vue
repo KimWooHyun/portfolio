@@ -9,7 +9,7 @@
         <ul>
           <li><nuxt-link to="/#home" @click.native="changeStatus()">Home</nuxt-link></li>
           <li><nuxt-link to="/#about" @click.native="changeStatus()">About</nuxt-link></li>
-          <li><nuxt-link to="/#work" @click.native="changeStatus()">Work</nuxt-link></li>
+          <li><nuxt-link to="/#career" @click.native="changeStatus()">Career</nuxt-link></li>
           <li><nuxt-link to="/#pa" @click.native="changeStatus()">Personal Activities</nuxt-link></li>
         </ul>
       </div>

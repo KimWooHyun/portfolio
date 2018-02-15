@@ -1,14 +1,13 @@
 <template>
   <figure class="flex flex-ai-center flex-jc-center" :style="cardStyle" @click="clickCard()">
-    <p v-if="logoImg === 'ateamventures'">ATEAM VENTURES</p>
-    <img :src="require('~/assets' + logoImg)" :class="imgResponsive ? 'img-responsive' : ''" v-else/>
+    <img :src="require('~/assets' + logoImg)" :class="imgResponsive ? 'img-responsive' : ''"/>
   </figure>
 </template>
 
 <script>
 
 export default {
-  name: 'work-card',
+  name: 'career-card',
   props: {
     logoImg: {
       type: String,
@@ -31,7 +30,7 @@ export default {
   methods: {
     clickCard () {
       if (this.link) {
-        this.$router.push(`/work/${this.link}`)
+        this.$router.push(`/career/${this.link}`)
       }
     }
   }

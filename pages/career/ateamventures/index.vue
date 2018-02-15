@@ -3,6 +3,7 @@
     <section class="flex flex-jc-center flex-ai-center section-main">
       <div class="col-m-12 col-p-12">
         <h1>ATEAM VENTURES</h1>
+        <h2>Free People's Creativity</h2>
       </div>
     </section>
     <section class="container section-info">
