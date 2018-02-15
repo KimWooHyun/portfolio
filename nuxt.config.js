@@ -12,9 +12,12 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '김우현의 웹 포트폴리오' },
       { property: "og:title", content: '김우현의 웹 포트폴리오' },
+      { property: "og:description", content: '김우현의 웹 포트폴리오' },
       { property: "og:url", content: 'https://kimwoohyun.github.io/portfolio' },
       { property: "og:image", content: 'https://raw.githubusercontent.com/KimWooHyun/portfolio/master/assets/image/meta/meta.png' },
-      { property: "og:description", content: '김우현의 웹 포트폴리오' }
+      { property: "og:image:type", content: "image/png" },
+      { property: "og:image:width", content: "400" },
+      { property: "og:image:height", content: "300" }
     ],
     link: [
       // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
