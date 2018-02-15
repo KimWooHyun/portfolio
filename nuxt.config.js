@@ -13,7 +13,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: '김우현의 웹 포트폴리오' },
       { property: "og:title", content: '김우현의 웹 포트폴리오' },
       { property: "og:url", content: 'https://kimwoohyun.github.io/portfolio' },
-      { property: "og:image", content: 'https://github.com/KimWooHyun/portfolio/blob/master/assets/image/meta/meta.png' },
+      { property: "og:image", content: 'https://raw.githubusercontent.com/KimWooHyun/portfolio/master/assets/image/meta/meta.png' },
       { property: "og:description", content: '김우현의 웹 포트폴리오' }
     ],
     link: [
