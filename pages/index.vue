@@ -35,7 +35,7 @@
       </section>
       <section id="pa" class="col-m-12 col-p-12">
         <h1><span>Personal Activities</span></h1>
-        <div class="flex flex-wrap row">
+        <div class="flex flex-wrap flex-jc-center row">
           <div class="col-m-12 col-p-4" v-for="card in paCards" :key="card.id">
             <pa-card
               :date="card.date"
@@ -74,6 +74,28 @@ export default {
         }
       ],
       paCards: [
+        {
+          'date': '2018.02 - 현재',
+          'title': 'Women Techmakers KR 2018',
+          'img': '/pa/wtm-logo.png',
+          'contents': [
+            '<strong>Women Techmakers KR 2018 오거나이저</strong>',
+            '- 행사준비',
+            '- 안내사이트 제작',
+            '- <a href="https://wtm-korea-2018.firebaseapp.com/">https://wtm-korea-2018.firebaseapp.com/</a>'
+          ]
+        },
+        {
+          'date': '2017.08 - 현재',
+          'title': 'DjangoCon KR 2018',
+          'img': '/pa/djangocon-logo.png',
+          'contents': [
+            '<strong>DjangoCon KR 2018 오거나이저</strong>',
+            '- 행사준비',
+            '- 안내사이트 제작',
+            '- <a href="https://djangokr.github.io/django.conf2018/">https://djangokr.github.io/django.conf2018/</a>'
+          ]
+        },
         {
           'date': '2017.07 - 현재',
           'title': 'vue-lunar-calendar',
